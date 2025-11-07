@@ -15,7 +15,6 @@
     <header class="main-header">
         <!-- Logo -->
         <div class="logo"></div>
-
         <nav>
             <a class="border rounded p-2" href="#home-page">Home</a>
             <a class="border rounded p-2" href="#profile-page">Our Profile</a>
@@ -39,21 +38,63 @@
         </section>
 
         <!-- portofolio -->
-        <section id="portofolio-page" class="min-h-[500px] text-center">
-            <h2 class="text-xl font-bold">Welcome to our portofolio</h2>
-            <p class="mt-2">We are glad to have you here.</p>
+        <section id="portofolio-page" class="section">
+            <h2 class="text-xl font-bold">Our portofolio</h2></br>
+        <div class="circle-container">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
         </section>
 
         <!-- message us -->
-        <section id="message-page" class="min-h-[500px] text-center">
-            <h2 class="text-xl font-bold">Welcome to our nessage</h2>
-            <p class="mt-2">We are glad to have you here.</p>
+        <section id="message-page" class="min-h-[500px]">
+        <h2 class="text-xl font-bold">Message Us</h2>
+
+        <div class="container">
+
+            <!-- FORM -->
+            <div class="box">
+                <form id="messageForm" onsubmit="return validateForm()">
+
+                    <label>Nama :</label>
+                    <input type="text" id="nama" placeholder="Masukkan nama"/>
+
+                    <label>Tanggal Lahir :</label>
+                    <input type="date" id="tanggal">
+
+                    <label>Jenis Kelamin :</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="Laki-laki"> Laki-Laki</label>
+                        <label><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
+                    </div>
+
+                    <label>Pesan :</label>
+                    <textarea id="pesan" placeholder="Tulis pesan anda"></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <!-- OUTPUT -->
+            <div class="box">
+                <p><strong>Current time :</strong> <span id="currentTime"></span></p><br>
+
+                <p><strong>Nama :</strong> <span id="rNama">-</span></p>
+                <p><strong>Tanggal Lahir :</strong> <span id="rTanggal">-</span></p>
+                <p><strong>Jenis Kelamin :</strong> <span id="rGender">-</span></p>
+                <p><strong>Pesan :</strong> <span id="rPesan">-</span></p>
+            </div>
+
+        </div>
         </section>
 
     </main>
 
     <!-- Footer -->
-    <footer></footer>
+    <footer>
+        <div class="footer">Created By Afrida</div>
+    </footer>
 
     <!--  -->
     <script src="js/script.js"></script>

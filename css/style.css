@@ -1,9 +1,9 @@
 .logo {
     height: 75px;
     width: 75px;
-    background-color: grey;
+    background-color: yellow;
     border-radius: 50%;
-    background-image: url(https://img.freepik.com/foto-premium/rantai-realistis-3d-atau-ilustrasi-3d-ikon-tautan_394271-4494.jpg?semt=ais_hybrid&w=740&q=80);
+    background-image: url(https://img.freepik.com/vektor-premium/desain-logo-bangunan-sederhana_161396-737.jpghttps://img.freepik.com/vektor-premium/desain-logo-kantor-dengan-elemen-rumah-dan-atap-bangunan_173603-2268.jpg);
     background-size: revert;
 }
 .main-header {
@@ -11,3 +11,83 @@
     justify-content: space-between;
     align-items: center;
 }
+.circle-container {
+    display: flex;
+    gap: 40px;
+}
+.circle {
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 20px;
+}
+.section {
+    padding: 50px 80px;
+}
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fafafa;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 40px;
+    }
+
+    .box {
+        width: 45%;
+        padding: 25px;
+        border: 1px solid rgb(190, 190, 190);
+        border-radius: 10px;
+        background: white;
+    }
+
+    label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: 1px solid rgb(170, 170, 170);
+    }
+
+    textarea {
+        height: 90px;
+    }
+
+    .radio-group {
+        display: flex;
+        gap: 10px;
+        margin-top: 5px;
+    }
+
+    button {
+        margin-top: 20px;
+        width: 100%;
+        padding: 10px;
+        background-color: rgb(60, 130, 255);
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: rgb(35, 90, 200);
+    }
+
+    .footer {
+        padding: 15px;
+        text-align: right;
+        font-size: 14px;
+    }
