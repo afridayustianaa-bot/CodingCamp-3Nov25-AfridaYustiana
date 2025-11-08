@@ -1,3 +1,12 @@
+welcomeMessage();
+function welcomeMessage() {
+    let name = prompt("Please enter your name:");
+
+    if (name != null) {
+        document.getElementById('welcome-speech').innerHTML =
+            'Selamat Datang ' + name + ', di <span class="text-blue-600 font-bold">Jasa Kuli Bangunan</span>';
+    }
+}
 
 function validateForm() {
     // Ambil nilai input
@@ -38,6 +47,11 @@ function validateForm() {
 
     return false; // cegah reload halaman
 }
+function toggleMenu() {
+  const nav = document.getElementById("nav-menu");
+  nav.classList.toggle("show");
+}
+
 
     // Menampilkan tahun saat ini di footer
   document.getElementById("footerText").innerHTML =
