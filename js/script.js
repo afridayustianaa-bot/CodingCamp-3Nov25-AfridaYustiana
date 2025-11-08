@@ -8,112 +8,95 @@ function welcomeMessage() {
     }
 }
 
-function validateForm() {
-    // Ambil nilai input
-    let nama = document.getElementById("nama").value;
-    let tanggal = document.getElementById("tanggal").value;
-    let pesan = document.getElementById("pesan").value;
-    let gender = document.querySelector("input[name='gender']:checked");
+// Menampilkan tahun saat ini di footer
+document.getElementById("footerText").innerHTML =
+"&copy; " + new Date().getFullYear() + " ConstructPro. Hak Cipta Dilindungi.";
 
-    // Validasi input
-    if (nama === "") {
-        alert("Nama tidak boleh kosong!");
-        return false;
-    }
+//  Validasi formulir kontak
+const form = document.getElementById("contactForm");
 
-    if (tanggal === "") {
-        alert("Tanggal lahir harus diisi!");
-        return false;
-    }
+form.addEventListener("submit", function (event) {
+event.preventDefault();
 
-    if (!gender) {
-        alert("Pilih jenis kelamin!");
-        return false;
-    }
+// Ambil nilai input
+let name = document.getElementById("name").value.trim();
+let email = document.getElementById("email").value.trim();
+let message = document.getElementById("message").value.trim();
 
-    if (pesan === "") {
-        alert("Pesan tidak boleh kosong!");
-        return false;
-    }
+// Elemen error
+let errName = document.getElementById("errName");
+let errEmail = document.getElementById("errEmail");
+let errMessage = document.getElementById("errMessage");
 
-    // Jika lulus validasi maka tampilkan output
-    document.getElementById("rNama").innerText = nama;
-    document.getElementById("rTanggal").innerText = tanggal;
-    document.getElementById("rGender").innerText = gender.value;
-    document.getElementById("rPesan").innerText = pesan;
+// Kosongkan error sebelum validasi ulang
+errName.textContent = "";
+errEmail.textContent = "";
+errMessage.textContent = "";
 
-    // Kosongkan form setelah submit
-    document.getElementById("messageForm").reset();
+let valid = true;
 
-    return false; // cegah reload halaman
-}
-function toggleMenu() {
-  const nav = document.getElementById("nav-menu");
-  nav.classList.toggle("show");
+// Validasi sesuai aturan Zod
+if (name.length < 2) {
+  errName.textContent = "Nama harus minimal 2 karakter.";
+  valid = false;
 }
 
+if (!email.includes("@") || !email.includes(".")) {
+  errEmail.textContent = "Masukkan email yang valid.";
+  valid = false;
+}
 
-    // Menampilkan tahun saat ini di footer
-  document.getElementById("footerText").innerHTML =
-    "&copy; " + new Date().getFullYear() + " ConstructPro. Hak Cipta Dilindungi.";
+if (message.length < 10) {
+  errMessage.textContent = "Pesan harus minimal 10 karakter.";
+  valid = false;
+}
 
-    //  Validasi formulir kontak
-  const form = document.getElementById("contactForm");
+if (!valid) return;
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
+// Jika valid maka submit form dan reset form
+showToast();
+form.reset();
+});
 
-    // Ambil nilai input
-    let name = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let message = document.getElementById("message").value.trim();
+// 
+function goToContact() {
+location.href = "#message-page";
+}
 
-    // Elemen error
-    let errName = document.getElementById("errName");
-    let errEmail = document.getElementById("errEmail");
-    let errMessage = document.getElementById("errMessage");
+const words = ["Tukang Bangunan", "Renovasi Rumah", "Pemasangan Keramik", "Finishing & Pengecatan"];
+let index = 0;
 
-    // Kosongkan error sebelum validasi ulang
-    errName.textContent = "";
-    errEmail.textContent = "";
-    errMessage.textContent = "";
+function changeText() {
+document.getElementById("dynamicText").innerText = words[index];
+index = (index + 1) % words.length;
+}
 
-    let valid = true;
+setInterval(changeText, 2000);
 
-    // Validasi sesuai aturan Zod
-    if (name.length < 2) {
-      errName.textContent = "Nama harus minimal 2 karakter.";
-      valid = false;
-    }
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
 
-    if (!email.includes("@") || !email.includes(".")) {
-      errEmail.textContent = "Masukkan email yang valid.";
-      valid = false;
-    }
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+});
 
-    if (message.length < 10) {
-      errMessage.textContent = "Pesan harus minimal 10 karakter.";
-      valid = false;
-    }
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+e.preventDefault(); // mencegah halaman reload
 
-    if (!valid) return;
+let name = document.getElementById("name").value.trim();
+let email = document.getElementById("email").value.trim();
+let message = document.getElementById("message").value.trim();
 
-    // Jika valid maka submit form dan reset form
-    showToast();
-    form.reset();
-  });
+document.getElementById("errName").textContent = name ? "" : "Nama wajib diisi";
+document.getElementById("errEmail").textContent = email ? "" : "Email wajib diisi";
+document.getElementById("errMessage").textContent = message ? "" : "Pesan wajib diisi";
 
-    // 
-  function goToContact() {
-    location.href = "#message-page";
-  }
+if (name && email && message) {
+            const toast = document.getElementById("toast");
+            
+            toast.classList.add("show"); // tampilkan toast
+            setTimeout(() => toast.classList.remove("show"), 2500); // hilang otomatis
 
-    const words = ["Tukang Bangunan", "Renovasi Rumah", "Pemasangan Keramik", "Finishing & Pengecatan"];
-  let index = 0;
-
-  function changeText() {
-    document.getElementById("dynamicText").innerText = words[index];
-    index = (index + 1) % words.length;
-  }
-
-  setInterval(changeText, 2000);
+            this.reset(); // reset form
+        }
+});
