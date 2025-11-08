@@ -14,86 +14,186 @@
     <!-- Header -->
     <header class="main-header">
         <!-- Logo -->
-        <div class="logo"></div>
+          <div class="logo">
+            👷‍♂️ <span>ConstructPro</span>
+          </div>
         <nav>
-            <a class="border rounded p-2" href="#home-page">Home</a>
-            <a class="border rounded p-2" href="#profile-page">Our Profile</a>
-            <a class="border rounded p-2" href="#portofolio-page">Portofolio</a>
-            <a class="border rounded p-2" href="#message-page">Message Us</a>
+            <a href="#home-page">Home</a>
+            <a href="#about-page">Our Profile</a>
+            <a href="#portofolio-page">Portofolio</a>
+            <a href="#message-page">Message Us</a>
         </nav>
     </header>
 
     <!-- Main Content -->
     <main>
         <!-- home -->
-        <section id="home-page" class="min-h-[500px] text-center">
-            <h2 class="text-xl font-bold" id="welcome-speech">Welcome to our website</h2>
-            <p class="mt-2">We are glad to have you here.</p>
+        <section id="home-page" class="min-h-screen flex items-center bg-gray-100">
+        <div class="container mx-auto max-w-6xl px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+            <!-- TEXT -->
+            <div class="space-y-6">
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight text-gray-800">
+                Selamat Datang di <span class="text-blue-600">Jasa Kuli Bangunan</span>
+            </h1>
+
+            <p class="text-gray-600 text-lg leading-relaxed">
+                Siap membantu proyek pembangunan dan renovasi Anda. Hasil rapi, cepat, dan profesional.
+            </p>
+
+            <div class="flex gap-4">
+                <a href="#message-page"
+                class="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg font-semibold hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 transition duration-200">
+                Hubungi Kami
+                </a>
+
+                <a href="#portofolio-page"
+                class="mt-6 inline-block bg-gray-400 text-white px-6 py-3 rounded-lg shadow-lg font-semibold hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 transition duration-200">
+                Lihat Proyek
+                </a>
+            </div>
+            </div>
+
+            <!-- IMAGE -->
+            <div class="flex justify-center">
+            <img
+                src="https://media.suara.com/pictures/653x366/2021/10/05/43413-kuli-bangunan.jpg"
+                alt="Construction Worker"
+                class="rounded-xl shadow-lg w-full max-w-md object-cover"
+            />
+            </div>
+
+        </div>
         </section>
 
-        <!-- profile -->
-        <section id="profile-page" class="min-h-[500px] text-center">
-            <h2 class="text-xl font-bold">Welcome to our profile</h2>
-            <p class="mt-2">We are glad to have you here.</p>
+        <!-- about -->
+        <section id="about-page" class="bg-gray-100 py-16">
+        <div class="container mx-auto max-w-6xl px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+            <!-- TEXT -->
+            <div>
+            <h2 class="text-4xl font-bold mb-4 text-gray-800">Tentang Kami</h2>
+            <p class="text-gray-600 leading-relaxed mb-6">
+                Kami adalah tim <span class="font-semibold text-blue-600">kuli bangunan berpengalaman</span>
+                yang telah mengerjakan berbagai proyek pembangunan dan renovasi rumah.
+                Mengutamakan ketepatan waktu, kualitas terbaik, dan hasil yang rapi.
+            </p>
+
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">Keahlian Kami:</h3>
+
+            <ul class="space-y-2 text-gray-700">
+                <li class="flex items-center gap-2"><span>✅</span> Renovasi rumah & bangunan</li>
+                <li class="flex items-center gap-2"><span>✅</span> Pemasangan keramik & lantai</li>
+                <li class="flex items-center gap-2"><span>✅</span> Pembetonan & pemasangan bata</li>
+                <li class="flex items-center gap-2"><span>✅</span> Pengecatan & finishing</li>
+                <li class="flex items-center gap-2"><span>✅</span> Perbaikan & maintenance bangunan</li>
+            </ul>
+
+            <button
+                onclick="goToContact()"
+                class="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg font-semibold hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 transition duration-200">
+                Hubungi Kami
+            </button>
+            </div>
+
+            <!-- IMAGE -->
+            <div class="flex justify-center">
+            <img
+                src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=900&q=85"
+                alt="Kuli Bangunan"
+                class="rounded-xl shadow-lg w-full max-w-md object-cover"/>
+            </div>
+
+        </div>
         </section>
 
         <!-- portofolio -->
-        <section id="portofolio-page" class="section">
-            <h2 class="text-xl font-bold">Our portofolio</h2></br>
-        <div class="circle-container">
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-        </div>
-        </section>
+        <section id="portofolio-page" class="card width: 300px;">
+            <h2 class="text-4xl font-bold mb-4 text-gray-800 text-center">Project Portfolio</h2>
+                <div class="card-container">
+                
+                <!-- CARD 1 -->
+                <div class="card">
+                    <img src="https://storage.googleapis.com/storage-ajaib-prd-platform-wp-artifact/2022/02/Ini-Dia-Kriteria-Kuli-Bangunan-yang-Sebaiknya-Dipilih.jpg" alt="Project Photo" />
+                    <div class="card-content">
+                    <p class="card-title">Renovasi Rumah</p>
+                    <p class="card-role">Peran: Tukang Bangunan</p>
+                    <p class="card-description">
+                        Proyek renovasi dinding dan pengecatan ulang.
+                    </p>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ--M8XrsMQR6zhEuAMAq8Fj7_dpObJLQNL0A&s" alt="Project Photo" />
+                    <div class="card-content">
+                    <p class="card-title">Pemasangan Keramik</p>
+                    <p class="card-role">Peran: Tukang Keramik</p>
+                    <p class="card-description">
+                        Pemasangan lantai keramik dengan hasil yang rapi dan presisi.
+                    </p>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="card">
+                    <img src="https://morpho.co.id/wp-content/uploads/2021/11/12.-Jasa-pengecatan-dinding2-1024x512.jpg" alt="Project Photo" />
+                    <div class="card-content">
+                    <p class="card-title">Pengecatan Dinding</p>
+                    <p class="card-role">Peran: Tukang Cat</p>
+                    <p class="card-description">
+                        Pengecatan dinding oleh profesional dengan hasil yang rapi dan tahan lama.
+                    </p>
+                    </div>
+                </div>
+                </div>
+            </section>
 
         <!-- message us -->
-        <section id="message-page" class="min-h-[500px]">
-        <h2 class="text-xl font-bold">Message Us</h2>
+        <section id="message-page" class="section">
+            <h2 class="text-4xl font-bold mb-4 text-gray-800 text-center">Hubungi Saya</h2>
+            <p style="text-align:center; color:#666; margin-bottom:25px;">
+                Punya proyek? Kirim pesan melalui formulir di bawah ini.
+            </p>
 
-        <div class="container">
+            <div class="card">
+                <form id="contactForm">
 
-            <!-- FORM -->
-            <div class="box">
-                <form id="messageForm" onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label>Nama</label>
+                    <input type="text" id="name" placeholder="Nama Anda" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    <p class="error" id="errName"></p>
+                </div>
 
-                    <label>Nama :</label>
-                    <input type="text" id="nama" placeholder="Masukkan nama"/>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="email" placeholder="contoh@gmail.com" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                    <p class="error" id="errEmail"></p>
+                </div>
 
-                    <label>Tanggal Lahir :</label>
-                    <input type="date" id="tanggal">
+                <div class="form-group">
+                    <label>Pesan</label>
+                    <textarea id="message" placeholder="Ceritakan tentang proyek Anda..." rows="4"></textarea>
+                    <p class="error" id="errMessage"></p>
+                </div>
 
-                    <label>Jenis Kelamin :</label>
-                    <div class="radio-group">
-                        <label><input type="radio" name="gender" value="Laki-laki"> Laki-Laki</label>
-                        <label><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
-                    </div>
+                <button 
+                type="submit"
+                class="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg font-semibold hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 transition duration-200">
+                Kirim Pesan
+                </button>
 
-                    <label>Pesan :</label>
-                    <textarea id="pesan" placeholder="Tulis pesan anda"></textarea>
-
-                    <button type="submit">Submit</button>
                 </form>
             </div>
-
-            <!-- OUTPUT -->
-            <div class="box">
-                <p><strong>Current time :</strong> <span id="currentTime"></span></p><br>
-
-                <p><strong>Nama :</strong> <span id="rNama">-</span></p>
-                <p><strong>Tanggal Lahir :</strong> <span id="rTanggal">-</span></p>
-                <p><strong>Jenis Kelamin :</strong> <span id="rGender">-</span></p>
-                <p><strong>Pesan :</strong> <span id="rPesan">-</span></p>
-            </div>
-
-        </div>
         </section>
+        <div id="toast">✅ Pesan berhasil dikirim!</div>
 
     </main>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer">Created By Afrida</div>
+    <footer style="border-top: 1px solid #ddd; padding: 20px 0; text-align: center;">
+        <p id="footerText" style="color: #666; font-size: 14px;"></p>
     </footer>
 
     <!--  -->
