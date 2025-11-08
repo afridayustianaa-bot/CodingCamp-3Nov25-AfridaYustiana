@@ -12,19 +12,23 @@
     
 
     <!-- Header -->
-    <header class="main-header">
-        <!-- Logo -->
-          <div class="logo">
-            👷‍♂️ <span>ConstructPro</span>
-          </div>
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-        <nav id="nav-menu">
-            <a href="#home-page">Home</a>
-            <a href="#about-page">Our Profile</a>
-            <a href="#portofolio-page">Portofolio</a>
-            <a href="#message-page">Message Us</a>
-        </nav>
-    </header>
+<header class="main-header flex items-center justify-between">
+  <div class="logo flex items-center gap-2 text-xl font-semibold">
+    👷‍♂️ <span>ConstructPro</span>
+  </div>
+
+  <button id="menu-toggle" class="hamburger">
+      ☰
+  </button>
+
+  <!-- Menu -->
+  <nav id="nav-menu">
+      <a href="#home-page">Home</a>
+      <a href="#about-page">Our Profile</a>
+      <a href="#portofolio-page">Portofolio</a>
+      <a href="#message-page">Message Us</a>
+  </nav>
+</header>
 
     <!-- Main Content -->
     <main>
@@ -175,7 +179,9 @@
 
                 <div class="form-group">
                     <label>Pesan</label>
-                    <textarea id="message" placeholder="Ceritakan tentang proyek Anda..." rows="4"></textarea>
+                    <textarea id="message" placeholder="Ceritakan tentang proyek Anda..."
+                    class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    rows="4"></textarea>
                     <p class="error" id="errMessage"></p>
                 </div>
 
